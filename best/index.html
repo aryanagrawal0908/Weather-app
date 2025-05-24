@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .weather-container {
+            padding: 20px;
+        }
+        .current-weather {
+            margin-top: 20px;
+        }
+        .city-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .city-location {
+            font-size: 18px;
+            color: gray;
+        }
+        .temperature {
+            font-size: 72px;
+            margin: 10px 0;
+        }
+        .weather-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .weather-detail-item {
+            padding: 10px;
+        }
+        .weather-condition {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-container">
+        <div>
+            <input id="city-input" type="text" placeholder="Enter city name"/>
+            <button id="search-button">Search</button>
+        </div>
+        
+        <div class="current-weather">
+            <h2>CURRENT WEATHER</h2>
+            <div id="city-name" class="city-name">City Name</div>
+            <div id="city-location" class="city-location">Region, Country</div>
+            <div class="temperature">
+                <span id="temp">28</span>°<span class="unit">C</span>
+            </div>
+            <div id="weather-condition" class="weather-condition">Cloudy ☁️</div>
+            <div>RealFeel® <span id="real-feel">29°</span></div>
+            
+            <div class="weather-details">
+                <div class="weather-detail-item">
+                    <div>Wind</div>
+                    <div id="wind-speed">E 13 km/h</div>
+                </div>
+                <div class="weather-detail-item">
+                    <div>Wind Gusts</div>
+                    <div id="wind-gusts">25 km/h</div>
+                </div>
+                <div class="weather-detail-item">
+                    <div>Air Quality</div>
+                    <div id="air-quality" style="color: orange;">Poor</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
